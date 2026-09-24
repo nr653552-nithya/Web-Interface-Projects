@@ -1,0 +1,50 @@
+.attendance {
+  width: 900px;
+  margin: 50px auto;
+  padding: 30px;
+  text-align: center;
+  background: linear-gradient(135deg, #7c3aed, #db2777);
+  border-radius: 20px;
+}
+
+.attendance h1 {
+  color: white;
+}
+
+.count-box {
+  display: flex;
+  justify-content: space-around;
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+.student-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.student-card {
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.student-card button {
+  padding: 8px 15px;
+  margin: 5px;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+}
+
+.present {
+  background-color: green;
+}
+
+.absent {
+  background-color: red;
+}

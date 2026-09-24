@@ -1,0 +1,167 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background: #f0f4f8;
+  color: #333;
+}
+
+form {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+  text-align: center;
+  color: #243b55;
+  margin-bottom: 25px;
+}
+
+h2 {
+  text-align: center;
+  color: #2563eb;
+  margin-bottom: 25px;
+}
+
+label {
+  display: inline-block;
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #374151;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 4px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  transition: 0.3s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 5px rgba(37, 99, 235, 0.3);
+}
+
+input[readonly] {
+  background: #e5e7eb;
+  cursor: not-allowed;
+}
+
+input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 5px;
+  border: 1px dashed #64748b;
+  border-radius: 6px;
+  background: #f8fafc;
+  cursor: pointer;
+}
+
+textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+select {
+  background: white;
+  cursor: pointer;
+}
+
+p {
+  margin-top: 3px;
+  margin-bottom: 12px;
+  font-size: 13px;
+}
+
+/* Error messages */
+p[style*="red"] {
+  color: #dc2626 !important;
+  font-weight: bold;
+  min-height: 15px;
+}
+
+/* Checkbox */
+input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  accent-color: #2563eb;
+  cursor: pointer;
+}
+
+/* Buttons */
+button {
+  padding: 12px 28px;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button[type="submit"] {
+  background: #2563eb;
+  color: white;
+}
+
+button[type="submit"]:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+button[type="button"] {
+  background: #ef4444;
+  color: white;
+}
+
+button[type="button"]:hover {
+  background: #dc2626;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  form {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  button {
+    padding: 10px 20px;
+  }
+}

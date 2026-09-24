@@ -1,0 +1,124 @@
+.calculator-container {
+  width: 100%;
+  min-height: 650px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  background: #f3f0ff;
+}
+
+.calculator {
+  width: 350px;
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.calculator h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #4c1d95;
+  font-size: 25px;
+}
+
+/* Display Screen */
+
+.screen {
+  height: 120px;
+  background: linear-gradient(135deg, #7c3aed, #db2777);
+  border-radius: 15px;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  color: white;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.screen p {
+  min-height: 25px;
+  font-size: 17px;
+  color: #f3e8ff;
+}
+
+.screen h1 {
+  font-size: 38px;
+  margin: 0;
+  overflow-x: auto;
+}
+
+/* Button Grid */
+
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.button-grid button {
+  height: 58px;
+  border: none;
+  border-radius: 14px;
+  background: #ede9fe;
+  color: #312e81;
+  font-size: 19px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.button-grid button:hover {
+  transform: scale(1.05);
+  background: #ddd6fe;
+}
+
+/* AC Button */
+
+.clear-btn {
+  background: #fee2e2 !important;
+  color: #dc2626 !important;
+}
+
+/* Delete Button */
+
+.delete-btn {
+  background: #fce7f3 !important;
+  color: #db2777 !important;
+  font-size: 15px !important;
+}
+
+/* Operator Buttons */
+
+.operator-btn {
+  background: #ddd6fe !important;
+  color: #6d28d9 !important;
+  font-size: 24px !important;
+}
+
+/* Equal Button */
+
+.equal-btn {
+  background: linear-gradient(135deg, #7c3aed, #db2777) !important;
+  color: white !important;
+  font-size: 28px !important;
+}
+
+.equal-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 450px) {
+  .calculator {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .calculator-container {
+    padding: 20px 10px;
+  }
+}

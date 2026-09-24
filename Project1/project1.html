@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Counter App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Counter App</h1>
+
+        <h2 id="counter">0</h2>
+
+        <div class="buttons">
+            <button id="increase">+1</button>
+            <button id="decrease">-1</button>
+            <button id="reset">Reset</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 350px;
+    margin: 100px auto;
+    background: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px gray;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+#counter {
+    font-size: 50px;
+    color: blue;
+    margin: 20px 0;
+}
+
+.buttons button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+#increase {
+    background-color: green;
+    color: white;
+}
+
+#decrease {
+    background-color: red;
+    color: white;
+}
+
+#reset {
+    background-color: orange;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+</style>
+<script>
+let count = 0;
+
+let counter = document.getElementById("counter");
+
+document.getElementById("increase").addEventListener("click", function () {
+    count++;
+    counter.textContent = count;
+});
+
+document.getElementById("decrease").addEventListener("click", function () {
+    count--;
+    counter.textContent = count;
+});
+
+document.getElementById("reset").addEventListener("click", function () {
+    count = 0;
+    counter.textContent = count;
+});
+</script>
+</html>
