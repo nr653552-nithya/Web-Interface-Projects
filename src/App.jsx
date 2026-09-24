@@ -20,6 +20,7 @@ function App() {
     setSelectedProject(null);
   };
 
+  // PROJECT 1
   if (selectedProject === "Project 1") {
     return (
       <div className="output-page">
@@ -30,7 +31,7 @@ function App() {
         <h1>Project 1</h1>
 
         <iframe
-          src={`${import.meta.env.BASE_URL}Project1/counter.html`}
+          src={`${import.meta.env.BASE_URL}Project1/project1.html`}
           title="Project 1"
           className="project-output"
         />
@@ -38,6 +39,7 @@ function App() {
     );
   }
 
+  // PROJECT 2
   if (selectedProject === "Project 2") {
     return (
       <div className="output-page">
@@ -56,6 +58,7 @@ function App() {
     );
   }
 
+  // PROJECT 3
   if (selectedProject === "Project 3") {
     return (
       <div className="output-page">
@@ -64,11 +67,13 @@ function App() {
         </button>
 
         <h1>Project 3</h1>
+
         <Project3 />
       </div>
     );
   }
 
+  // PROJECT 4
   if (selectedProject === "Project 4") {
     return (
       <div className="output-page">
@@ -77,11 +82,13 @@ function App() {
         </button>
 
         <h1>Project 4</h1>
+
         <Project4 />
       </div>
     );
   }
 
+  // PROJECT 5
   if (selectedProject === "Project 5") {
     return (
       <div className="output-page">
@@ -90,11 +97,13 @@ function App() {
         </button>
 
         <h1>Project 5</h1>
+
         <Project5 />
       </div>
     );
   }
 
+  // PROJECT 6
   if (selectedProject === "Project 6") {
     return (
       <div className="output-page">
@@ -103,11 +112,13 @@ function App() {
         </button>
 
         <h1>Project 6</h1>
+
         <Project6 />
       </div>
     );
   }
 
+  // PROJECT 7
   if (selectedProject === "Project 7") {
     return (
       <div className="output-page">
@@ -116,11 +127,13 @@ function App() {
         </button>
 
         <h1>Project 7</h1>
+
         <Project7 />
       </div>
     );
   }
 
+  // PROJECT 8
   if (selectedProject === "Project 8") {
     return (
       <div className="output-page">
@@ -129,11 +142,13 @@ function App() {
         </button>
 
         <h1>Project 8</h1>
+
         <Project8 />
       </div>
     );
   }
 
+  // HOME PAGE
   return (
     <div className="home-page">
       <h1>WEB INTERFACE PROJECTS</h1>

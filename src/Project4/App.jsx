@@ -1,29 +1,226 @@
+import { useState } from "react";
+
+import Project3 from "./Project3/App";
+import Project4 from "./Project4/App";
+import Project5 from "./Project5/App";
+import Project6 from "./Project6/App";
+import Project7 from "./Project7/App";
+import Project8 from "./Project8/App";
+
 import "./App.css";
-import HobbyCard from "./HobbyCard";
 
 function App() {
+  const [selectedProject, setSelectedProject] = useState(null);
+
+  const openProject = (project) => {
+    setSelectedProject(project);
+  };
+
+  const goHome = () => {
+    setSelectedProject(null);
+  };
+
+  // PROJECT 1
+  if (selectedProject === "Project 1") {
+    return (
+      <div className="output-page">
+        <button className="back-button" onClick={goHome}>
+          ← Back to Projects
+        </button>
+
+        <h1>Project 1</h1>
+
+        <iframe
+          src={`${import.meta.env.BASE_URL}Project1/project1.html`}
+          title="Project 1"
+          className="project-output"
+        />
+      </div>
+    );
+  }
+
+  // PROJECT 2
+  if (selectedProject === "Project 2") {
+    return (
+      <div className="output-page">
+        <button className="back-button" onClick={goHome}>
+          ← Back to Projects
+        </button>
+
+        <h1>Project 2</h1>
+
+        <iframe
+          src={`${import.meta.env.BASE_URL}Project2/project2.html`}
+          title="Project 2"
+          className="project-output"
+        />
+      </div>
+    );
+  }
+
+  // PROJECT 3
+  if (selectedProject === "Project 3") {
+    return (
+      <div className="output-page">
+        <button className="back-button" onClick={goHome}>
+          ← Back to Projects
+        </button>
+
+        <h1>Project 3</h1>
+
+        <Project3 />
+      </div>
+    );
+  }
+
+  // PROJECT 4
+  if (selectedProject === "Project 4") {
+    return (
+      <div className="output-page">
+        <button className="back-button" onClick={goHome}>
+          ← Back to Projects
+        </button>
+
+        <h1>Project 4</h1>
+
+        <Project4 />
+      </div>
+    );
+  }
+
+  // PROJECT 5
+  if (selectedProject === "Project 5") {
+    return (
+      <div className="output-page">
+        <button className="back-button" onClick={goHome}>
+          ← Back to Projects
+        </button>
+
+        <h1>Project 5</h1>
+
+        <Project5 />
+      </div>
+    );
+  }
+
+  // PROJECT 6
+  if (selectedProject === "Project 6") {
+    return (
+      <div className="output-page">
+        <button className="back-button" onClick={goHome}>
+          ← Back to Projects
+        </button>
+
+        <h1>Project 6</h1>
+
+        <Project6 />
+      </div>
+    );
+  }
+
+  // PROJECT 7
+  if (selectedProject === "Project 7") {
+    return (
+      <div className="output-page">
+        <button className="back-button" onClick={goHome}>
+          ← Back to Projects
+        </button>
+
+        <h1>Project 7</h1>
+
+        <Project7 />
+      </div>
+    );
+  }
+
+  // PROJECT 8
+  if (selectedProject === "Project 8") {
+    return (
+      <div className="output-page">
+        <button className="back-button" onClick={goHome}>
+          ← Back to Projects
+        </button>
+
+        <h1>Project 8</h1>
+
+        <Project8 />
+      </div>
+    );
+  }
+
+  // HOME PAGE
   return (
-    <div className="app">
-      <h1>My Hobbies</h1>
+    <div className="home-page">
+      <h1>WEB INTERFACE PROJECTS</h1>
 
-      <div className="hobby-container">
-        <HobbyCard
-          image="https://images.unsplash.com/photo-1516979187457-637abb4f9353"
-          hobbyName="Reading"
-          description="I enjoy reading books during my free time."
-        />
+      <p>Select a project to view its output</p>
 
-        <HobbyCard
-          image="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f"
-          hobbyName="Music"
-          description="I love listening to music and exploring new songs."
-        />
+      <div className="project-grid">
 
-        <HobbyCard
-          image="https://images.unsplash.com/photo-1517836357463-d25dfeac3438"
-          hobbyName="Fitness"
-          description="I like doing simple exercises to stay active and healthy."
-        />
+        <button
+          className="project-card"
+          onClick={() => openProject("Project 1")}
+        >
+          <span>Project 1</span>
+          <small>Counter App</small>
+        </button>
+
+        <button
+          className="project-card"
+          onClick={() => openProject("Project 2")}
+        >
+          <span>Project 2</span>
+          <small>Web Project</small>
+        </button>
+
+        <button
+          className="project-card"
+          onClick={() => openProject("Project 3")}
+        >
+          <span>Project 3</span>
+          <small>Student Portal</small>
+        </button>
+
+        <button
+          className="project-card"
+          onClick={() => openProject("Project 4")}
+        >
+          <span>Project 4</span>
+          <small>My Hobbies</small>
+        </button>
+
+        <button
+          className="project-card"
+          onClick={() => openProject("Project 5")}
+        >
+          <span>Project 5</span>
+          <small>Calculator</small>
+        </button>
+
+        <button
+          className="project-card"
+          onClick={() => openProject("Project 6")}
+        >
+          <span>Project 6</span>
+          <small>Attendance</small>
+        </button>
+
+        <button
+          className="project-card"
+          onClick={() => openProject("Project 7")}
+        >
+          <span>Project 7</span>
+          <small>Form Validation</small>
+        </button>
+
+        <button
+          className="project-card"
+          onClick={() => openProject("Project 8")}
+        >
+          <span>Project 8</span>
+          <small>My Portfolio</small>
+        </button>
+
       </div>
     </div>
   );
