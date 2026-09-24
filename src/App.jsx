@@ -30,7 +30,7 @@ function App() {
         <h1>Project 1</h1>
 
         <iframe
-          src="/Project1/project1.html"
+          src={`${import.meta.env.BASE_URL}Project1/counter.html`}
           title="Project 1"
           className="project-output"
         />
@@ -48,7 +48,7 @@ function App() {
         <h1>Project 2</h1>
 
         <iframe
-          src="/Project2/project2.html"
+          src={`${import.meta.env.BASE_URL}Project2/project2.html`}
           title="Project 2"
           className="project-output"
         />
@@ -62,6 +62,7 @@ function App() {
         <button className="back-button" onClick={goHome}>
           ← Back to Projects
         </button>
+
         <h1>Project 3</h1>
         <Project3 />
       </div>
@@ -74,6 +75,7 @@ function App() {
         <button className="back-button" onClick={goHome}>
           ← Back to Projects
         </button>
+
         <h1>Project 4</h1>
         <Project4 />
       </div>
@@ -86,6 +88,7 @@ function App() {
         <button className="back-button" onClick={goHome}>
           ← Back to Projects
         </button>
+
         <h1>Project 5</h1>
         <Project5 />
       </div>
@@ -98,6 +101,7 @@ function App() {
         <button className="back-button" onClick={goHome}>
           ← Back to Projects
         </button>
+
         <h1>Project 6</h1>
         <Project6 />
       </div>
@@ -110,6 +114,7 @@ function App() {
         <button className="back-button" onClick={goHome}>
           ← Back to Projects
         </button>
+
         <h1>Project 7</h1>
         <Project7 />
       </div>
@@ -122,6 +127,7 @@ function App() {
         <button className="back-button" onClick={goHome}>
           ← Back to Projects
         </button>
+
         <h1>Project 8</h1>
         <Project8 />
       </div>
@@ -131,6 +137,7 @@ function App() {
   return (
     <div className="home-page">
       <h1>WEB INTERFACE PROJECTS</h1>
+
       <p>Select a project to view its output</p>
 
       <div className="project-grid">
