@@ -6,6 +6,8 @@ import Project5 from "./Project5/App";
 import Project6 from "./Project6/App";
 import Project7 from "./Project7/App";
 import Project8 from "./Project8/App";
+import Project9 from "./Project9/App";
+import Project10 from "./Project10/App";
 
 import "./App.css";
 
@@ -20,7 +22,6 @@ function App() {
     setSelectedProject(null);
   };
 
-  // PROJECT 1
   if (selectedProject === "Project 1") {
     return (
       <div className="output-page">
@@ -39,7 +40,6 @@ function App() {
     );
   }
 
-  // PROJECT 2
   if (selectedProject === "Project 2") {
     return (
       <div className="output-page">
@@ -58,7 +58,6 @@ function App() {
     );
   }
 
-  // PROJECT 3
   if (selectedProject === "Project 3") {
     return (
       <div className="output-page">
@@ -67,13 +66,11 @@ function App() {
         </button>
 
         <h1>Project 3</h1>
-
         <Project3 />
       </div>
     );
   }
 
-  // PROJECT 4
   if (selectedProject === "Project 4") {
     return (
       <div className="output-page">
@@ -82,13 +79,11 @@ function App() {
         </button>
 
         <h1>Project 4</h1>
-
         <Project4 />
       </div>
     );
   }
 
-  // PROJECT 5
   if (selectedProject === "Project 5") {
     return (
       <div className="output-page">
@@ -97,13 +92,11 @@ function App() {
         </button>
 
         <h1>Project 5</h1>
-
         <Project5 />
       </div>
     );
   }
 
-  // PROJECT 6
   if (selectedProject === "Project 6") {
     return (
       <div className="output-page">
@@ -112,13 +105,11 @@ function App() {
         </button>
 
         <h1>Project 6</h1>
-
         <Project6 />
       </div>
     );
   }
 
-  // PROJECT 7
   if (selectedProject === "Project 7") {
     return (
       <div className="output-page">
@@ -127,13 +118,11 @@ function App() {
         </button>
 
         <h1>Project 7</h1>
-
         <Project7 />
       </div>
     );
   }
 
-  // PROJECT 8
   if (selectedProject === "Project 8") {
     return (
       <div className="output-page">
@@ -142,13 +131,37 @@ function App() {
         </button>
 
         <h1>Project 8</h1>
-
         <Project8 />
       </div>
     );
   }
 
-  // HOME PAGE
+  if (selectedProject === "Project 9") {
+    return (
+      <div className="output-page">
+        <button className="back-button" onClick={goHome}>
+          ← Back to Projects
+        </button>
+
+        <h1>Project 9</h1>
+        <Project9 />
+      </div>
+    );
+  }
+
+  if (selectedProject === "Project 10") {
+    return (
+      <div className="output-page">
+        <button className="back-button" onClick={goHome}>
+          ← Back to Projects
+        </button>
+
+        <h1>Project 10</h1>
+        <Project10 />
+      </div>
+    );
+  }
+
   return (
     <div className="home-page">
       <h1>WEB INTERFACE PROJECTS</h1>
@@ -219,6 +232,22 @@ function App() {
         >
           <span>Project 8</span>
           <small>My Portfolio</small>
+        </button>
+
+        <button
+          className="project-card"
+          onClick={() => openProject("Project 9")}
+        >
+          <span>Project 9</span>
+          <small>Portfolio</small>
+        </button>
+
+        <button
+          className="project-card"
+          onClick={() => openProject("Project 10")}
+        >
+          <span>Project 10</span>
+          <small>Todo App</small>
         </button>
 
       </div>
