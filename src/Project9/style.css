@@ -1,0 +1,981 @@
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(
+    135deg,
+    #f5f7ff 0%,
+    #fff7fb 50%,
+    #f2fbff 100%
+  );
+  color: #1e293b;
+}
+
+button,
+select {
+  font-family: inherit;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+
+/* =========================================================
+   CGPA BOX
+========================================================= */
+
+.cgpa-box {
+  background: linear-gradient(135deg, #ede9fe, #fae8ff);
+  padding: 10px 18px;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid #ddd6fe;
+}
+
+.cgpa-box span {
+  display: block;
+  color: #7c6f8f;
+  font-size: 9px;
+  margin-bottom: 4px;
+}
+
+.cgpa-box strong {
+  color: #7c3aed;
+  font-size: 20px;
+}
+
+.cgpa-text {
+  color: #7c3aed;
+}
+
+.green-text {
+  color: #059669;
+}
+
+
+/* =========================================================
+   TOP BAR
+========================================================= */
+
+.topbar {
+  height: 76px;
+  background: rgba(255, 255, 255, 0.97);
+  border-bottom: 1px solid #e5e7eb;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 6%;
+
+  box-shadow: 0 4px 18px rgba(30, 41, 59, 0.05);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+
+  background: linear-gradient(
+    135deg,
+    #6366f1,
+    #8b5cf6,
+    #ec4899
+  );
+
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 20px;
+
+  box-shadow: 0 6px 15px rgba(139, 92, 246, 0.25);
+}
+
+.brand h2 {
+  font-size: 19px;
+  color: #1e293b;
+}
+
+.brand span {
+  display: block;
+  color: #8b95a7;
+  font-size: 11px;
+  margin-top: 2px;
+}
+
+.student-mini {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mini-avatar {
+  width: 38px;
+  height: 38px;
+
+  border-radius: 50%;
+
+  background: linear-gradient(
+    135deg,
+    #dbeafe,
+    #ede9fe
+  );
+
+  color: #6366f1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: bold;
+
+  border: 2px solid #e0e7ff;
+}
+
+.student-mini b {
+  display: block;
+  font-size: 13px;
+}
+
+.student-mini small {
+  color: #8992a5;
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.main {
+  width: 88%;
+  max-width: 1250px;
+  margin: 35px auto;
+}
+
+
+/* =========================================================
+   WELCOME
+========================================================= */
+
+.welcome {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.small-title {
+  color: #7c3aed;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+
+.welcome h1 {
+  font-size: 28px;
+  margin-bottom: 6px;
+
+  color: #6366f1;
+}
+
+.welcome p {
+  color: #718096;
+  font-size: 13px;
+}
+
+.academic-badge {
+  background: linear-gradient(
+    135deg,
+    #ffffff,
+    #f5f3ff
+  );
+
+  padding: 14px 20px;
+
+  border-radius: 14px;
+
+  border: 1px solid #ddd6fe;
+
+  text-align: right;
+
+  box-shadow: 0 6px 18px rgba(99, 102, 241, 0.08);
+}
+
+.academic-badge span {
+  display: block;
+  color: #8b94a7;
+  font-size: 11px;
+}
+
+.academic-badge strong {
+  display: block;
+  margin-top: 4px;
+
+  color: #7c3aed;
+}
+
+
+/* =========================================================
+   PROFILE
+========================================================= */
+
+.profile-card {
+  background: rgba(255, 255, 255, 0.97);
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 18px;
+
+  padding: 25px;
+
+  display: flex;
+  align-items: center;
+  gap: 22px;
+
+  position: relative;
+
+  box-shadow: 0 8px 28px rgba(30, 41, 59, 0.07);
+
+  transition: 0.25s;
+}
+
+.profile-card:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 12px 30px rgba(30, 41, 59, 0.1);
+}
+
+.large-avatar {
+  width: 85px;
+  height: 85px;
+
+  border-radius: 50%;
+
+  background: linear-gradient(
+    135deg,
+    #4f46e5,
+    #7c3aed,
+    #db2777
+  );
+
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 25px;
+  font-weight: bold;
+
+  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.25);
+}
+
+.profile-main {
+  flex: 1;
+}
+
+.profile-main h2 {
+  font-size: 20px;
+}
+
+.profile-main > p {
+  color: #6f788b;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.profile-info {
+  display: flex;
+  gap: 35px;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+
+.profile-info span {
+  display: block;
+  color: #9aa2b2;
+  font-size: 10px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.profile-info b {
+  font-size: 12px;
+}
+
+.status-badge {
+  align-self: flex-start;
+
+  background: #ecfdf5;
+
+  color: #059669;
+
+  padding: 7px 12px;
+
+  border-radius: 20px;
+
+  font-size: 11px;
+
+  font-weight: bold;
+
+  border: 1px solid #a7f3d0;
+}
+
+.status-badge span {
+  font-size: 8px;
+}
+
+
+/* =========================================================
+   STATS
+========================================================= */
+
+.stats {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 18px;
+
+  margin: 22px 0;
+}
+
+.stat-card {
+  background: white;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 15px;
+
+  padding: 20px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  box-shadow: 0 5px 18px rgba(30, 41, 59, 0.05);
+
+  transition: 0.25s;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow: 0 10px 25px rgba(30, 41, 59, 0.1);
+}
+
+.stat-icon {
+  width: 45px;
+  height: 45px;
+
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 19px;
+}
+
+.stat-icon.blue {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.stat-icon.green {
+  background: #d1fae5;
+  color: #059669;
+}
+
+.stat-icon.purple {
+  background: #ede9fe;
+  color: #7c3aed;
+}
+
+.stat-icon.orange {
+  background: #ffedd5;
+  color: #ea580c;
+}
+
+.stat-card span {
+  color: #8b94a7;
+  font-size: 11px;
+}
+
+.stat-card h2 {
+  margin-top: 4px;
+  font-size: 21px;
+}
+
+
+/* =========================================================
+   RESULT SECTION
+========================================================= */
+
+.result-section {
+  background: white;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 18px;
+
+  padding: 25px;
+
+  box-shadow: 0 8px 28px rgba(30, 41, 59, 0.06);
+}
+
+.result-heading {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+.result-heading h2 {
+  font-size: 21px;
+}
+
+.result-heading select {
+  padding: 10px 13px;
+
+  border: 1px solid #ddd6fe;
+
+  border-radius: 9px;
+
+  background: #fafaff;
+
+  color: #374151;
+
+  font-size: 12px;
+
+  cursor: pointer;
+}
+
+.result-heading select:focus {
+  outline: none;
+
+  border-color: #8b5cf6;
+
+  box-shadow: 0 0 0 3px #ede9fe;
+}
+
+
+/* =========================================================
+   SEMESTER BUTTONS
+========================================================= */
+
+.semester-pills {
+  display: flex;
+
+  gap: 9px;
+
+  margin: 22px 0;
+
+  padding-bottom: 20px;
+
+  border-bottom: 1px solid #edf0f5;
+}
+
+.semester-pills button {
+  border: 1px solid #e2e8f0;
+
+  background: #f8fafc;
+
+  width: 62px;
+
+  height: 52px;
+
+  border-radius: 11px;
+
+  color: #64748b;
+
+  cursor: pointer;
+
+  transition: 0.25s;
+}
+
+.semester-pills button span {
+  display: block;
+
+  font-size: 8px;
+
+  margin-bottom: 3px;
+}
+
+.semester-pills button {
+  font-size: 16px;
+
+  font-weight: bold;
+}
+
+.semester-pills button:hover {
+  border-color: #8b5cf6;
+
+  color: #7c3aed;
+
+  background: #faf5ff;
+
+  transform: translateY(-2px);
+}
+
+.semester-pills button.selected {
+  background: linear-gradient(
+    135deg,
+    #4f46e5,
+    #7c3aed,
+    #c026d3
+  );
+
+  border-color: transparent;
+
+  color: white;
+
+  box-shadow: 0 7px 16px rgba(124, 58, 237, 0.28);
+}
+
+
+/* =========================================================
+   CURRENT SEMESTER
+========================================================= */
+
+.current-sem {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 18px;
+}
+
+.current-sem h3 {
+  font-size: 16px;
+}
+
+.current-sem p {
+  color: #8b94a7;
+
+  font-size: 11px;
+
+  margin-top: 4px;
+}
+
+.pass-badge {
+  background: #ecfdf5;
+
+  color: #059669;
+
+  padding: 8px 15px;
+
+  border-radius: 20px;
+
+  font-size: 11px;
+
+  font-weight: bold;
+
+  border: 1px solid #a7f3d0;
+}
+
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  font-size: 12px;
+}
+
+thead {
+  background: linear-gradient(
+    90deg,
+    #eef2ff,
+    #faf5ff,
+    #fdf2f8
+  );
+}
+
+th {
+  text-align: left;
+
+  padding: 13px 12px;
+
+  color: #64748b;
+
+  font-size: 10px;
+
+  font-weight: bold;
+
+  border-bottom: 1px solid #e5e7eb;
+}
+
+td {
+  padding: 14px 12px;
+
+  border-bottom: 1px solid #eef0f4;
+
+  color: #4e5768;
+}
+
+tbody tr {
+  transition: 0.2s;
+}
+
+tbody tr:hover {
+  background: linear-gradient(
+    90deg,
+    #f8faff,
+    #fcf8ff,
+    #fff8fb
+  );
+}
+
+.sem-label {
+  background: #ede9fe;
+
+  color: #7c3aed;
+
+  padding: 5px 8px;
+
+  border-radius: 5px;
+
+  font-size: 9px;
+
+  font-weight: bold;
+}
+
+.course-code {
+  color: #4f46e5;
+
+  font-weight: 600;
+}
+
+.course-name {
+  color: #30394a;
+
+  font-weight: 500;
+}
+
+.grade {
+  display: inline-block;
+
+  min-width: 32px;
+
+  text-align: center;
+
+  background: #fff7ed;
+
+  color: #ea580c;
+
+  padding: 5px 7px;
+
+  border-radius: 6px;
+
+  font-weight: bold;
+
+  border: 1px solid #fed7aa;
+}
+
+.result-pass {
+  color: #059669;
+
+  font-weight: bold;
+}
+
+
+/* =========================================================
+   RESULT FOOTER
+========================================================= */
+
+.result-footer {
+  margin-top: 20px;
+
+  padding: 17px;
+
+  background: linear-gradient(
+    135deg,
+    #f8faff,
+    #fbf7ff,
+    #fff8fb
+  );
+
+  border-radius: 11px;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 20px;
+
+  border: 1px solid #edf0f5;
+}
+
+.result-footer span {
+  display: block;
+
+  color: #9199aa;
+
+  font-size: 10px;
+
+  margin-bottom: 5px;
+}
+
+.result-footer b {
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   DEMO NOTE
+========================================================= */
+
+.demo-note {
+  margin-top: 20px;
+
+  background: linear-gradient(
+    135deg,
+    #eef2ff,
+    #f5f3ff,
+    #fdf2f8
+  );
+
+  border: 1px solid #ddd6fe;
+
+  padding: 15px;
+
+  border-radius: 11px;
+
+  display: flex;
+
+  gap: 12px;
+
+  color: #4e6080;
+}
+
+.demo-note > span {
+  width: 25px;
+
+  height: 25px;
+
+  border-radius: 50%;
+
+  background: linear-gradient(
+    135deg,
+    #6366f1,
+    #a855f7
+  );
+
+  color: white;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 12px;
+
+  flex-shrink: 0;
+}
+
+.demo-note b {
+  font-size: 12px;
+}
+
+.demo-note p {
+  margin-top: 3px;
+
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+  text-align: center;
+
+  padding: 30px;
+
+  color: #9aa2b2;
+
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   GENERAL EFFECTS
+========================================================= */
+
+button,
+.stat-card,
+.profile-card,
+.result-section,
+.academic-badge {
+  transition: all 0.25s ease;
+}
+
+button:focus,
+select:focus {
+  outline: none;
+}
+
+::selection {
+  background: #c4b5fd;
+
+  color: #312e81;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    #818cf8,
+    #c084fc
+  );
+
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7c3aed;
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .profile-card {
+    align-items: flex-start;
+  }
+
+  .status-badge {
+    position: absolute;
+
+    right: 20px;
+
+    top: 20px;
+  }
+
+  .profile-info {
+    gap: 18px;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .topbar {
+    padding: 0 4%;
+  }
+
+  .brand span {
+    display: none;
+  }
+
+  .student-mini {
+    display: none;
+  }
+
+  .main {
+    width: 94%;
+  }
+
+  .welcome {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 15px;
+  }
+
+  .academic-badge {
+    text-align: left;
+  }
+
+  .profile-card {
+    flex-direction: column;
+  }
+
+  .status-badge {
+    position: static;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .result-heading {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 15px;
+  }
+
+  .result-heading select {
+    width: 100%;
+  }
+
+  .semester-pills {
+    overflow-x: auto;
+  }
+
+  .result-footer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
